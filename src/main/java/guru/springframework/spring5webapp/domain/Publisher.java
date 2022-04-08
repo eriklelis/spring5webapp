@@ -18,7 +18,7 @@ public class Publisher {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	private String addressLine1;
+	private String name;
 	private String city;
 	private String state;
 	private String zip;
@@ -32,7 +32,7 @@ public class Publisher {
 	
 	public Publisher(Long id, String addressLine1, String city, String state, String zip) {
 		this.id = id;
-		this.addressLine1 = addressLine1;
+		this.name = addressLine1;
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
@@ -41,18 +41,18 @@ public class Publisher {
 	
 	@Override
 	public String toString() {
-		return "Publisher [id=" + id + ", addressLine1=" + addressLine1 + ", city=" + city + ", state=" + state
+		return "Publisher [id=" + id + ", name=" + name + ", city=" + city + ", state=" + state
 				+ ", zip=" + zip + ", books=" + book + "]";
 	}
 
 
-	public String getAddressLine1() {
-		return addressLine1;
+	public String getName() {
+		return name;
 	}
 
 
-	public void setAddressLine1(String addressLine1) {
-		this.addressLine1 = addressLine1;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 
